@@ -55,7 +55,7 @@ function createCard(record, image, text) {
     this.classList.toggle('likesActives')
   })
 
-  clone.querySelector('.delete_but').addEventListener('click', function (delete_but) {
+  clone.querySelector('.delete_but').addEventListener('click', function () {
     this.closest('.card').remove()
   })
   return clone
