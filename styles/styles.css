@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(23, 27, 23);
+}
+
+.head {
+    display: flex;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    margin: 1vw;
+}
+
+.title {
+    text-align: center;
+    padding: 2vw;
+    color: rgb(71, 116, 75);
+}
+
+.input {
+    height: 3vh;
+    border-radius: 10px;
+    border: 1px solid rgb(53, 84, 53);
+    text-align: center;
+    font-size: 22px;
+    color: black;
+}
+
+#FatonBaton {
+    padding: 10px 25px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+
+
+.card {
+    width: 500px;
+    margin: 10px auto;
+    background-color: rgb(29, 38, 29);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.picture {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.record {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: rgb(163, 189, 163);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.text {
+    margin: 1vw;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+}
+
+.like_but,
+.delete_but {
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: rgb(27, 62, 29);
+}
+
+
+.likesActives {
+    background-color: rgb(88, 29, 26);
+}
