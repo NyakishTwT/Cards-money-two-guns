@@ -1,3 +1,8 @@
+import '../styles/styles.css'
+import sc2 from '../assets/Images/sc2.png';
+import eu4 from '../assets/Images/eu4.png';
+import guitar from '../assets/Images/guitara.png';
+
 let addButton = document.getElementById('FatonBaton')
 let inputRecord = document.getElementById('inputRecord')
 let inputPicture = document.getElementById('inputPicture')
@@ -6,17 +11,17 @@ let template = document.getElementById('content')
 const cardsData = [
   {
     record: 'Starcraft 2 top mmr',
-    image: 'assets/Images/sc2.png',
+    image: sc2,
     text: 'К сожалению я уже забросил эту игру довольно давно, но в прошлом я занимал топ даймонд лиги, так и не добравшись до мастер лиги,игра требует высокого порога входа, заучивание планов на игру, высокой скорости игры, готовности адаптироваться под соперника, по себе является одной из лучших стратегий, пусть даже и довольно старой'
   },
   {
     record: 'Больше всего часов',
-    image: 'assets/Images/eu4.png',
+    image: eu4,
     text: 'Игра, в которую я наиграл большее количество часов, представляет собой реиграбельную стратегию в реальном времени, где можно с 15 века довести выбранную страну до чего хочешь'
   },
   {
     record: 'Больше 2 лет игры на гитаре',
-    image: 'assets/Images/guitara.png',
+    image: guitar,
     text: 'Гитара является одним из фаворитов из всех хобби, и самым частым, самым незаброшенным и стабильным, моя первая песня перебором: "Город золотой"'
   }
 ]
