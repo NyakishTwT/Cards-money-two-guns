@@ -103,6 +103,9 @@ body {
 .correction{
     border-radius: 10px;
     background-color: rgb(27, 62, 29);
+    color: rgb(72, 160, 76);
+    font-size: 16px;
+    padding: 10px;
 }
 
 .modal {
