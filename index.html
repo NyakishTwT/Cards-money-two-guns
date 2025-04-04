@@ -30,23 +30,39 @@
                 <img src="" alt="" class="pic">
                 <p class="text"></p>
 
-                <div class="buttons">
+                <div class="buttons" id="cards-container">
                     <button class="like_but">❤️</button>
                     <button class="correction">Редактировать</button>
                     <button class="delete_but">🧹</button>
-                    
+
                 </div>
             </div>
 
         </template>
         <div class="modal" id="myModal">
-            <div class="modal-content">
-            </div>
+            <form class="modal-content">
+                <span class="close">&times;</span>
+
+                <h2 class="titleModal">Изменение карточки</h2>
+
+                <label for="title" class="labelModal">Заголовок:</label>
+                <input type="text" id="title" class="ModalInput" required placeholder="Заголовок">
+
+                <label for="image" class="labelModal">Путь к картинке:</label>
+                <input type="text" id="image" class="ModalInput" required placeholder="url изображения">
+
+                <label for="description" class="labelModal">Описание:</label>
+                <textarea id="description" class="Modaltextarea" required placeholder="Описание"></textarea>
+
+                <button type="submit" class="changeCard">Изменить</button>
+            </form>
         </div>
     </main>
 
+    <script type="module" src="./scripts/script.js" defer></script>
 
 </body>
-<script type="module" src="./scripts/script.js"></script>
+
+
 
 </html>

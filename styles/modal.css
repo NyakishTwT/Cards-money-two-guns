@@ -1,0 +1,75 @@
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 10px;
+}
+
+.titleModal {
+    font-size: 24px;
+    text-align: center;
+    color: #742929;
+    margin-bottom: 20px;
+}
+
+.labelModal {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2f0707;
+}
+
+.ModalInput,
+.Modaltextarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+
+.Modaltextarea:focus {
+    border-color: #9619b5;
+    outline: none;
+}
+
+
+.changeCard {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    background-color: #21a124;
+    color: white;
+    font-size: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 35%;
+    right: 38%;
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.show {
+    display: flex;
+}

@@ -1,13 +1,18 @@
 import '../styles/styles.css'
-import sc2 from '../assets/Images/sc2.png';
-import eu4 from '../assets/Images/eu4.png';
-import guitar from '../assets/Images/guitara.png';
+import sc2 from '../assets/Images/sc2.png'
+import eu4 from '../assets/Images/eu4.png'
+import guitar from '../assets/Images/guitara.png'
+import { addModal, closeModal, closeModalAll, } from './modal.js'
+import { sendForm } from './sendForm.js'
+import { AddCard } from './AddCard.js'
+// Импорты вверху 
 
+// Переменные тоже вверху
 let addButton = document.getElementById('FatonBaton')
-let inputRecord = document.getElementById('inputRecord')
-let inputPicture = document.getElementById('inputPicture')
-let inputText = document.getElementById('inputText')
 let template = document.getElementById('content')
+const closeBtn = document.querySelector('.close')
+const form = document.querySelector('.modal-content')
+const modal = document.getElementById('myModal')
 const cardsData = [
   {
     record: 'Starcraft 2 top mmr',
@@ -22,11 +27,11 @@ const cardsData = [
   {
     record: 'Больше 2 лет игры на гитаре',
     image: guitar,
-    text: 'Гитара является одним из фаворитов из всех хобби, и самым частым, самым незаброшенным и стабильным, моя первая песня перебором: "Город золотой"'
+    text: 'Гитара является одним из фаворитов из всех хобби, и самым частым, самым незаброшеным и стабильным, моя первая песня перебором: "Город золотой"'
   }
 ]
 
-
+// Эти карточки я создаю заранее из моего массива
 function createCards() {
   cardsData.forEach(data => {
     const clone = template.content.cloneNode(true)
@@ -45,30 +50,23 @@ function createCards() {
     template.appendChild(clone)
   })
 }
-
+// Потом вызываю эту функцию
 createCards()
 
 
-function createCard(record, image, text) {
-  const clone = template.content.cloneNode(true)
-  clone.querySelector('.record').textContent = record
-  clone.querySelector('.pic').src = image
-  clone.querySelector('.text').textContent = text
+
+// Добавление карточки
+addButton.addEventListener('click', AddCard)
+
+//Добавление модалки
+document.body.addEventListener('click', addModal)
+// Закрытие модального окна
+closeBtn.addEventListener('click', closeModal)
+// Модальное окно закрывается, когда идет клик вне модального окна
+window.addEventListener('click', closeModalAll)
+// 
+form.addEventListener('submit', sendForm)
 
 
-  clone.querySelector('.like_but').addEventListener('click', function () {
-    this.classList.toggle('likesActives')
-  })
-
-  clone.querySelector('.delete_but').addEventListener('click', function () {
-    this.closest('.card').remove()
-  })
-  return clone
-}
-addButton.addEventListener('click', function () {
-  const newCard = createCard(inputRecord.value, inputPicture.value, inputText.value)
-  template.appendChild(newCard)
-  inputRecord.value = ''
-  inputPicture.value = ''
-  inputText.value = ''
-});
+// Экспорты внизу
+export { modal, template }
