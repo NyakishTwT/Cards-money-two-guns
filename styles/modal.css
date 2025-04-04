@@ -62,9 +62,9 @@
 }
 
 .close {
-    position: absolute;
-    top: 35%;
-    right: 38%;
+    position: relative;
+    top: 0%;
+    right: 0%;
     color: #000000;
     font-size: 26px;
     font-weight: bold;
