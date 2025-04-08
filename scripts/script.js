@@ -39,13 +39,17 @@ function createCards() {
     clone.querySelector('.pic').src = data.image
     clone.querySelector('.text').textContent = data.text
 
-    clone.querySelector('.like_but').addEventListener('click', function () {
+    function like() {
       this.classList.toggle('likesActives')
-    })
+    }
 
-    clone.querySelector('.delete_but').addEventListener('click', function () {
+    clone.querySelector('.like_but').addEventListener('click', like)
+
+    function del() {
       this.closest('.card').remove()
-    })
+    }
+
+    clone.querySelector('.delete_but').addEventListener('click', del)
 
     template.appendChild(clone)
   })
